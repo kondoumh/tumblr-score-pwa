@@ -32,6 +32,9 @@ export default {
       this.title = blog['title']
       this.posts = blog['posts']
       this.url = blog['url']
+      const response2 = await fetch(`https://api.tumblr.com/v2/blog/${this.blogIdentifier}/posts/?notes_info=true&reblog_info=true&offset=20&api_key=${this.apiKey}`)
+      const data2 = await response2.json()
+      console.log(data2)
     }
   }
 }
