@@ -28,11 +28,9 @@ export default {
       this.blogIdentifier = localStorage.blogIdentifier
     }
   },
-  props: {
-    apiKey: String,
-    blogIdentifier: String
-  },
   data: () => ({
+    apiKey: String,
+    blogIdentifier: String,
     title: '',
     posts: 0,
     url: '',
