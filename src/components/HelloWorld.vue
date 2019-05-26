@@ -45,7 +45,7 @@ export default {
         this.posts = blog['posts']
         this.url = blog['url']
       }
-      this.skip += 100;
+      this.skip += 20;
       this.fetching = true;
       const response2 = await fetch(`https://api.tumblr.com/v2/blog/${this.blogIdentifier}/posts/?notes_info=true&reblog_info=true&offset=${this.skip}&api_key=${this.apiKey}`)
       const data2 = await response2.json()
